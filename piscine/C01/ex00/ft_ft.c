@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabernar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 14:02:55 by pabernar          #+#    #+#             */
-/*   Updated: 2023/08/05 14:05:33 by pabernar         ###   ########.fr       */
+/*   Created: 2023/07/21 09:32:44 by pabernar          #+#    #+#             */
+/*   Updated: 2023/07/21 10:15:41 by pabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+#include <stdio.h>
+*/
+void	ft_ft(int *nbr)
+{
+	*nbr = 42;
+}
+/*
+int	main(void)
+{
+	int	x;
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+	x = 1;
+	printf("%i\n", x);
+	ft_ft(&x);
+	printf("%i\n", x);
+	return (0);
+}*/

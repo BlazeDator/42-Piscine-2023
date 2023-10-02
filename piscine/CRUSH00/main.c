@@ -1,17 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pabernar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: linda-si <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 14:02:55 by pabernar          #+#    #+#             */
-/*   Updated: 2023/08/05 14:05:33 by pabernar         ###   ########.fr       */
+/*   Created: 2023/07/22 15:26:00 by linda-si          #+#    #+#             */
+/*   Updated: 2023/07/22 17:27:13 by linda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+void	rush(int x, int y);
+
+int	main(void)
+{
+	rush(5, 3);
+	rush(5, 1);
+	rush(1, 1);
+	rush(1, 5);
+	rush(4, 4);
+	return (0);
+}

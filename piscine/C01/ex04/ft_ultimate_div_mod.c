@@ -1,17 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabernar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 14:02:55 by pabernar          #+#    #+#             */
-/*   Updated: 2023/08/05 14:05:33 by pabernar         ###   ########.fr       */
+/*   Created: 2023/07/22 09:00:48 by pabernar          #+#    #+#             */
+/*   Updated: 2023/07/22 09:05:17 by pabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+#include <stdio.h>
+*/
+void	ft_ultimate_div_mod(int *a, int *b)
+{
+	int	div;
+	int	mod;
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+	div = *a / *b;
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
+}
+/*
+int	main(void)
+{
+	int	a;
+	int	b;
+
+	a = 10;
+	b = 3;
+	ft_ultimate_div_mod(&a, &b);
+	printf("Division of %i / %i\n", a, b);
+	printf("Result is %i\n", a);
+	printf("Remainder is %i", b);
+	return (0);
+}*/

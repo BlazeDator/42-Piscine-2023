@@ -1,29 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_tab.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabernar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 16:49:19 by pabernar          #+#    #+#             */
-/*   Updated: 2023/08/09 10:45:12 by pabernar         ###   ########.fr       */
+/*   Created: 2023/07/27 13:38:45 by pabernar          #+#    #+#             */
+/*   Updated: 2023/08/01 10:19:40 by pabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_stock_str.h"
-#include <stdlib.h>
-
-struct s_stock_str      *ft_strs_to_tab(int ac, char **av);
-
-void	ft_print(char	*str)
-{
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
-}
 
 void	ft_putnbr(int nb)
 {
@@ -50,33 +37,31 @@ void	ft_putnbr(int nb)
 		}
 	}
 }
-
-void	ft_show_tab(struct s_stock_str *par)
-{
-	while (par->str)
-	{
-		ft_print(par->str);
-		write(1, "\n", 1);
-		ft_putnbr(par->size);
-		write(1, "\n", 1);
-		ft_print(par->copy);
-		write(1, "\n", 1);
-		par++;
-	}
-}
-
+/*
 int	main(void)
 {
-	int	count;
-	char	**words;
-	t_stock_str *tab;
+	int	a;
 
-	count = 3;
-	words = malloc(sizeof(char *) * count);
-	words[0] = "Hello world!";
-	words[1] = "BESTIEEE!";
-	words[2] = "The cake is a lie";
-	tab = ft_strs_to_tab(count, words);
-	ft_show_tab(tab);
+	a = 42;
+	ft_putnbr(a);
+	write(1, "\n", 1);
+	a = 2147483647;
+	ft_putnbr(a);
+	write(1, "\n", 1);
+	a = -2147483648;
+	ft_putnbr(a);
+	write(1, "\n", 1);
+	a = 10;
+	ft_putnbr(a);
+	write(1, "\n", 1);
+	a = 0; 
+        ft_putnbr(a);
+        write(1, "\n", 1); 	
+	a = -42; 
+        ft_putnbr(a);
+        write(1, "\n", 1);
+	a = -10; 
+        ft_putnbr(a);
+        write(1, "\n", 1); 
 	return (0);
-}
+}*/

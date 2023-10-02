@@ -1,17 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabernar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 14:02:55 by pabernar          #+#    #+#             */
-/*   Updated: 2023/08/05 14:05:33 by pabernar         ###   ########.fr       */
+/*   Created: 2023/07/20 09:12:38 by pabernar          #+#    #+#             */
+/*   Updated: 2023/07/20 14:33:56 by pabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+#include <unistd.h>
+
+void	ft_print_comb(void)
+{
+	char	x;
+	char	y;
+	char	z;
+
+	x = '0';
+	while (x <= '7')
+	{
+		y = x + 1; 
+		while (y <= '8')
+		{
+			z = y + 1;
+			while (z <= '9')
+			{
+				write(1, &x, 1);
+				write(1, &y, 1);
+				write(1, &z, 1);
+				if (x < '7')
+					write(1, ", ", 2);
+				z++;
+			}
+			y++;
+		}
+		x++;
+	}
+}
+/*
+int	main(void)
+{
+	ft_print_comb();
+	return (0);
+}
+*/

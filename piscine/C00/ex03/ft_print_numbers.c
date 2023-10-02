@@ -1,17 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabernar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 14:02:55 by pabernar          #+#    #+#             */
-/*   Updated: 2023/08/05 14:05:33 by pabernar         ###   ########.fr       */
+/*   Created: 2023/07/19 15:33:36 by pabernar          #+#    #+#             */
+/*   Updated: 2023/07/20 14:00:50 by pabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+#include <unistd.h>
+
+void	ft_print_numbers(void)
+{
+	char	x;
+
+	x = '0';
+	while (x <= '9')
+	{
+		write(1, &x, 1);
+		x = x + 1;
+	}
+}
+/*
+int	main(void)
+{
+	ft_print_numbers();
+	return (0);
+}
+*/
